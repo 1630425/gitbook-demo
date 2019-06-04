@@ -10,7 +10,7 @@ cache:
 before_install:
     - export TZ='Asia/Shanghai' #更改时区
     - npm install hexo-cli -g  #安装hexo环境
-    - git clone "https://$GH_SOURCE_TOKEN$GH_REP_URL_SOURCE"
+    - git clone https://$GH_SOURCE_TOKEN@$GH_REP_URL_SOURCE
     - cd 1630425.github.io-s
     - npm i hexo-generator-json-content --save && npm i --save hexo-wordcount && git clone https://github.com/fi3ework/hexo-theme-archer.git themes/archer --depth=1
 
