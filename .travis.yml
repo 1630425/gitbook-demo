@@ -29,8 +29,8 @@ after_script:
   - cd .deploy_git
   - git checkout master
   - cd ../
-  - mv .deploy_git/.git/ $CUSTOM_PATH   #这一步之前的操作是为了保留master分支的提交记录，不然每次git init的话只有1条commit
-  - cd $CUSTOM_PATH
+  - mv .deploy_git/.git/ /public   #这一步之前的操作是为了保留master分支的提交记录，不然每次git init的话只有1条commit
+  - cd /public
   - rm -f .gitignore .travis.yml desc run-desc.md
   - git config user.name $GIT_NAME  #修改name
   - git config user.email $GIT_EMAIL  #修改email

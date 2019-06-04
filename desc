@@ -21,7 +21,6 @@ https://blog.csdn.net/qq_23079443/article/details/79015225
 GH_TOKEN=bd54a3a9d8f2c88a09be863c610b469b162d1d32
 GIT_EMAIL=
 GIT_NAME=
-CUSTOM_PATH=./BD_build
 GH_REP_URL_SOURCE=https://github.com/1630425/1630425.github.io-s.git
 GH_REP_URL_PAGES=github.com/1630425/gitbook-demo.git
 
