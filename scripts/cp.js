@@ -8,7 +8,7 @@ function run() {
         exit(1);
     } else {
         echo("======================CP Begin======================");
-        cd("~/1630425.github.io-s");
+        cd("1630425.github.io");
         echo("----------------------CP Files----------------------");
         //cp('-u', 'themes-archer_config.yml', 'themes/archer/_config.yml');
         cp('themes-archer_config.yml', 'themes/archer/_config.yml');
