@@ -11,7 +11,6 @@ before_install:
     - export TZ='Asia/Shanghai' #更改时区
     - npm install hexo-cli -g  #安装hexo环境
     - git clone "https://$GH_TOKEN@$GH_REP_URL_SOURCE"
-    - cd 1630425.github.io-s
     - npm i hexo-generator-json-content --save && npm i --save hexo-wordcount && git clone https://github.com/fi3ework/hexo-theme-archer.git themes/archer --depth=1
 
 #依赖安装
@@ -25,12 +24,7 @@ script:
     - hexo g #生成
 
 after_script:
-  - git clone https://$GH_REP_URL_PAGES .deploy_git  #GH_REF是最下面配置的仓库地址
-  - cd .deploy_git
-  - git checkout master
-  - cd ../
-  - mv .deploy_git/.git/ /public   #这一步之前的操作是为了保留master分支的提交记录，不然每次git init的话只有1条commit
-  - cd /public
+  - git clone https://$GH_REP_URL_PAGES  #GH_REF是最下面配置的仓库地址
   - rm -f .gitignore .travis.yml desc run-desc.md
   - git config user.name $GIT_NAME  #修改name
   - git config user.email $GIT_EMAIL  #修改email
