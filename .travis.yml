@@ -24,8 +24,7 @@ script:
     - hexo g #生成
 
 after_script:
-  - git clone https://$GH_REP_URL_PAGES  #GH_REF是最下面配置的仓库地址
-  - rm -f .gitignore .travis.yml desc run-desc.md
+  - cd ./public
   - git config user.name $GIT_NAME  #修改name
   - git config user.email $GIT_EMAIL  #修改email
   - git add -A
